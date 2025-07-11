@@ -1,0 +1,651 @@
+1
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int numeroIdade = 21;
+    string usuario = "Carlos";
+    char inicial = 'C';
+    float altura = 1.75;
+    bool ativo = false;
+    double saldo = 4523.98;
+    short int limiteCurto = 32000;
+    long int numeroGrande = 2000000000;
+    long long int numeroEnorme = 9223372036854770000;
+    unsigned int contagem = 4294960000;
+
+    cout << "Valor inteiro: " << numeroIdade << endl;
+    cout << "Texto (string): " << usuario << endl;
+    cout << "Caractere: " << inicial << endl;
+    cout << "Decimal (float): " << altura << endl;
+    cout << "Booleano: " << ativo << endl;
+    cout << "Decimal longo: " << saldo << endl;
+    cout << "Inteiro curto: " << limiteCurto << endl;
+    cout << "Longo: " << numeroGrande << endl;
+    cout << "Longo longo: " << numeroEnorme << endl;
+    cout << "Sem sinal (unsigned): " << contagem << endl;
+
+    return 0;
+}
+
+2
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int valorA, valorB;
+    cout << "Digite o primeiro valor: ";
+    cin >> valorA;
+    cout << "Digite o segundo valor: ";
+    cin >> valorB;
+
+    cout << "Adição: " << valorA + valorB << endl;
+    cout << "Diferença: " << valorA - valorB << endl;
+    cout << "Produto: " << valorA * valorB << endl;
+    cout << "Quociente: " << valorA / valorB << endl;
+
+    return 0;
+}
+
+3
+#include <iostream>
+using namespace std;
+
+int main() {
+    float raioCirculo, resultadoArea;
+    const float PI = 3.1416;
+
+    cout << "Informe o raio do círculo: ";
+    cin >> raioCirculo;
+
+    resultadoArea = PI * raioCirculo * raioCirculo;
+
+    cout << "A área calculada é: " << resultadoArea << endl;
+    return 0;
+}
+
+4
+#include <iostream>
+using namespace std;
+
+int main() {
+    int inteiro1 = 20, inteiro2 = 4;
+    float real1 = 20.0, real2 = 4.0;
+    double valor1 = 20.0, valor2 = 4.0;
+
+    cout << "Resultado int: " << inteiro1 / inteiro2 << endl;
+    cout << "Resultado float: " << real1 / real2 << endl;
+    cout << "Resultado double: " << valor1 / valor2 << endl;
+
+    return 0;
+}
+
+5
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string primeiroNome;
+    int anos;
+
+    cout << "Qual é seu nome? ";
+    cin >> primeiroNome;
+
+    cout << "Quantos anos você tem? ";
+    cin >> anos;
+
+    cout << primeiroNome << " tem " << anos << " anos." << endl;
+
+    return 0;
+}
+
+6
+#include <iostream>
+using namespace std;
+
+int somarValores(int x, int y) {
+    return x + y;
+}
+
+int main() {
+    int primeiro, segundo;
+
+    cout << "Informe o valor 1: ";
+    cin >> primeiro;
+    cout << "Informe o valor 2: ";
+    cin >> segundo;
+
+    int resultado = somarValores(primeiro, segundo);
+    cout << "Resultado da soma: " << resultado << endl;
+
+    return 0;
+}
+
+7
+
+#include <iostream>
+using namespace std;
+
+void verificarParidade(int numero) {
+    if (numero % 2 == 0) {
+        cout << "É um número par!" << endl;
+    } else {
+        cout << "É um número ímpar!" << endl;
+    }
+}
+
+int main() {
+    int valor;
+    cout << "Digite um número inteiro: ";
+    cin >> valor;
+
+    verificarParidade(valor);
+    return 0;
+}
+
+8
+
+#include <iostream>
+using namespace std;
+
+void saudacao() {
+    cout << "Olá! Programa iniciado com sucesso!" << endl;
+}
+
+int main() {
+    saudacao();
+    return 0;
+}
+
+9
+
+#include <iostream>
+using namespace std;
+
+int elevarAoQuadrado(int entrada) {
+    return entrada * entrada;
+}
+
+int main() {
+    int numero;
+    cout << "Digite um valor para calcular o quadrado: ";
+    cin >> numero;
+
+    int resposta = elevarAoQuadrado(numero);
+    cout << "O quadrado de " << numero << " é " << resposta << endl;
+
+    return 0;
+}
+
+10
+
+#include <iostream>
+using namespace std;
+
+void maiorValor(float a, float b) {
+    if (a > b) {
+        cout << "O maior valor é: " << a << endl;
+    } else if (b > a) {
+        cout << "O maior valor é: " << b << endl;
+    } else {
+        cout << "Os dois valores são iguais." << endl;
+    }
+}
+
+int main() {
+    float n1, n2;
+    cout << "Digite o primeiro número: ";
+    cin >> n1;
+    cout << "Digite o segundo número: ";
+    cin >> n2;
+
+    maiorValor(n1, n2);
+    return 0;
+}
+
+
+11
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero = 25;
+    int* ponteiroNumero = &numero;
+
+    cout << "Valor da variável: " << numero << endl;
+    cout << "Endereço da variável: " << ponteiroNumero << endl;
+
+    return 0;
+}
+
+
+12
+
+#include <iostream>
+using namespace std;
+
+void dobrarValor(int valor) {
+    int* ptr = &valor;
+    *ptr = *ptr * 2;
+    cout << "Valor dobrado: " << *ptr << endl;
+}
+
+int main() {
+    int entrada;
+    cout << "Informe um número para dobrar: ";
+    cin >> entrada;
+
+    dobrarValor(entrada);
+    return 0;
+}
+
+
+13
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int temp = 0;
+    int numA, numB;
+    int *ptrA = &numA;
+    int *ptrB = &numB;
+
+    cout << "Digite o primeiro valor: ";
+    cin >> numA;
+    cout << "Digite o segundo valor: ";
+    cin >> numB;
+
+    cout << "Antes da troca: A = " << numA << ", B = " << numB << endl;
+
+    temp = *ptrA;
+    *ptrA = *ptrB;
+    *ptrB = temp;
+
+    cout << "Depois da troca: A = " << *ptrA << ", B = " << *ptrB << endl;
+    return 0;
+}
+
+14
+
+#include <iostream>
+using namespace std;
+
+void mostrarElementos(int* vetor, int qtd) {
+    for (int i = 0; i < qtd; i++) {
+        cout << vetor[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int lista[5] = {10, 20, 30, 40, 50};
+    mostrarElementos(lista, 5);
+    return 0;
+}
+
+15
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float nota;
+    float* pNota = &nota;
+
+    cout << "Informe a nota final do estudante: ";
+    cin >> *pNota;
+
+    if (*pNota >= 0 && *pNota <= 10) {
+        if (*pNota >= 7) {
+            cout << "Aprovado!" << endl;
+        } else if (*pNota > 4) {
+            cout << "Necessário fazer prova final." << endl;
+        } else {
+            cout << "Reprovado." << endl;
+        }
+    } else {
+        cout << "Nota inválida." << endl;
+    }
+
+    return 0;
+}
+
+16
+
+#include <iostream>
+using namespace std;
+
+void inverter(int &x, int &y) {
+    int auxiliar = x;
+    x = y;
+    y = auxiliar;
+
+    cout << "Os valores foram invertidos." << endl;
+    cout << "Agora valor1 = " << x << ", valor2 = " << y << endl;
+}
+
+int main() {
+    int valor1, valor2;
+
+    cout << "Digite um valor inteiro: ";
+    cin >> valor1;
+    cout << "Digite outro valor: ";
+    cin >> valor2;
+
+    inverter(valor1, valor2);
+    return 0;
+}
+
+17
+
+#include <iostream>
+using namespace std;
+
+void triplicar(int valor, int &referencia) {
+    valor *= 3;
+    referencia *= 3;
+
+    cout << "Valor por cópia multiplicado: " << valor << endl;
+    cout << "Valor por referência multiplicado: " << referencia << endl;
+}
+
+int main() {
+    int base, ref;
+
+    cout << "Informe o número base: ";
+    cin >> base;
+    cout << "Informe o número de referência: ";
+    cin >> ref;
+
+    triplicar(base, ref);
+    return 0;
+}
+
+18
+
+#include <iostream>
+using namespace std;
+
+void adicionarUm(int *ponteiro) {
+    *ponteiro += 1;
+    cout << "Novo valor incrementado: " << *ponteiro << endl;
+}
+
+int main() {
+    int numero;
+    cout << "Digite um número inteiro: ";
+    cin >> numero;
+
+    adicionarUm(&numero);
+    return 0;
+}
+
+19
+
+#include <iostream>
+using namespace std;
+
+void calcularMedia(float a, float b, float c) {
+    float resultado = (a + b + c) / 3;
+    cout << "Média das notas: " << resultado << endl;
+}
+
+int main() {
+    float nota1, nota2, nota3;
+
+    cout << "Nota 1: ";
+    cin >> nota1;
+    cout << "Nota 2: ";
+    cin >> nota2;
+    cout << "Nota 3: ";
+    cin >> nota3;
+
+    calcularMedia(nota1, nota2, nota3);
+    return 0;
+}
+
+
+20
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void verificarSituacao(string aluno, float nota) {
+    if (nota >= 7) {
+        cout << aluno << " foi aprovado(a)." << endl;
+    } else if (nota >= 5) {
+        cout << aluno << " fará recuperação." << endl;
+    } else {
+        cout << aluno << " está reprovado(a)." << endl;
+    }
+}
+
+int main() {
+    string nomeEstudante;
+    float notaFinal;
+
+    cout << "Nome do estudante: ";
+    cin >> nomeEstudante;
+    cout << "Nota final: ";
+    cin >> notaFinal;
+
+    verificarSituacao(nomeEstudante, notaFinal);
+    return 0;
+}
+
+21
+
+#include <iostream>
+using namespace std;
+
+float calcularArea(float altura, float largura) {
+    return altura * largura;
+}
+
+int main() {
+    float h, l;
+
+    cout << "Altura do retângulo: ";
+    cin >> h;
+    cout << "Largura do retângulo: ";
+    cin >> l;
+
+    float resultado = calcularArea(h, l);
+    cout << "A área do retângulo é: " << resultado << endl;
+
+    return 0;
+}
+
+22
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float salarioBase, salarioFinal;
+    const float acrescimo = 0.15;
+
+    cout << "Digite o valor do salário: ";
+    cin >> salarioBase;
+
+    salarioFinal = salarioBase + (salarioBase * acrescimo);
+
+    cout << "Salário com aumento de 15%: " << salarioFinal << endl;
+    return 0;
+}
+
+
+23
+
+#pragma once
+#include <iostream>
+using namespace std;
+
+void exibirCabecalho() {
+    cout << "=== Bem-vindo ao sistema ===" << endl;
+}
+
+24
+
+#include <iostream>
+using namespace std;
+
+float calcularMediaVetor(int* vetor, int tamanho) {
+    int soma = 0;
+    for (int i = 0; i < tamanho; i++) {
+        soma += vetor[i];
+    }
+    return static_cast<float>(soma) / tamanho;
+}
+
+int main() {
+    int numeros[10] = {4, 5, 6, 7, 8, 9, 10, 3, 2, 1};
+    cout << "Média dos valores: " << calcularMediaVetor(numeros, 10) << endl;
+    return 0;
+}
+
+25
+
+#include <iostream>
+using namespace std;
+
+int trocarSinal(int &num) {
+    if (num > 0) {
+        return -num;
+    } else if (num < 0) {
+        return abs(num);
+    } else {
+        return 0;
+    }
+}
+
+int main() {
+    int valor;
+
+    cout << "Digite um número para inverter o sinal: ";
+    cin >> valor;
+
+    int novoValor = trocarSinal(valor);
+    cout << "Resultado com sinal invertido: " << novoValor << endl;
+
+    return 0;
+}
+
+26
+
+#include <iostream>
+using namespace std;
+
+void somar() {
+    float a, b;
+    cout << "Digite dois valores para somar: ";
+    cin >> a >> b;
+    cout << "Soma = " << a + b << endl;
+}
+
+void subtrair() {
+    float a, b;
+    cout << "Digite dois valores para subtrair: ";
+    cin >> a >> b;
+    cout << "Subtração = " << a - b << endl;
+}
+
+void multiplicar() {
+    float a, b;
+    cout << "Digite dois valores para multiplicar: ";
+    cin >> a >> b;
+    cout << "Multiplicação = " << a * b << endl;
+}
+
+void exibirMenu() {
+    int es
+
+27
+
+#include <iostream>
+using namespace std;
+
+float saldoAtual = 1000.0;
+const float LIMITE = 500.0;
+
+void realizarSaque(float valor) {
+    if (valor <= saldoAtual && valor <= LIMITE)
+        saldoAtual -= valor;
+    else
+        cout << "Saque não permitido." << endl;
+}
+
+void realizarDeposito(float valor) {
+    saldoAtual += valor;
+}
+
+void mostrarSaldo() {
+    cout << "Saldo disponível: R$ " << saldoAtual << endl;
+}
+
+int main() {
+    realizarSaque(150);
+    realizarDeposito(250);
+    mostrarSaldo();
+    return 0;
+}
+
+28
+
+#include <iostream>
+using namespace std;
+
+struct Aluno {
+    string nome;
+    int idade;
+    float peso;
+};
+
+void exibirAluno(Aluno* ptr) {
+    cout << "Nome: " << ptr->nome << ", Idade: " << ptr->idade << ", Peso: " << ptr->peso << " kg" << endl;
+}
+
+int main() {
+    Aluno estudante = {"Joana", 22, 60.5f};
+    exibirAluno(&estudante);
+    return 0;
+}
+
+29
+#include <iostream>
+using namespace std;
+
+template <typename T>
+void inverter(T* x, T* y) {
+    T temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int main() {
+    int a = 5, b = 9;
+    inverter(&a, &b);
+    cout << "Inteiros trocados: " << a << " e " << b << endl;
+
+    double d1 = 2.3, d2 = 7.8;
+    inverter(&d1, &d2);
+    cout << "Doubles trocados: " << d1 << " e " << d2 << endl;
+
+    return 0;
+}
+
+30
+#pragma once
+#include <iostream>
+using namespace std;
+
+void apresentarMensagem() {
+    cout << "Função executada com sucesso (pragma once)." << endl;
+}
